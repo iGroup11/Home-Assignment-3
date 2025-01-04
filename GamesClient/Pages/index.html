@@ -39,7 +39,7 @@
 
             function givemeMyGames() {
 
-                let api = "https://localhost:7257/api/Games";
+                let api = "https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Games";
                 ajaxCall("GET", api, "", postSCB, postECB);
             }
 
@@ -94,7 +94,7 @@
                 console.log(game.appID);
                 console.log(user);
                 console.log(user.Id);
-                let api = `https://localhost:7257/api/Users/AddGametoUser?userId=${user.Id}&gameId=${game.appID}`;
+                let api = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Users/AddGametoUser?userId=${user.Id}&gameId=${game.appID}`;
                 ajaxCall("GET", api, "", addSCB, addECB);
 
             }

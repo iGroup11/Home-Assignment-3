@@ -52,7 +52,7 @@
                     Email: newmail,
                     Password: newpassword
                 };
-                let api = `https://localhost:7257/api/Users/${user.Id}`
+                let api = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Users/${user.Id}`
                 ajaxCall("PUT", api, JSON.stringify(newuser), postSCB, postECB)
                 function postSCB(message) {
                     console.log(user.Id)

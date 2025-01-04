@@ -35,7 +35,7 @@
                     Password: $("#password").val()
                 };
                 console.log(loginuser)
-                let api = "https://localhost:7257/api/Users/SearchUser"
+                let api = "https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Users/SearchUser"
                 ajaxCall("POST", api, JSON.stringify(loginuser), searchSCB, searchECB);
                 function searchSCB(user) {
                     console.log(user);

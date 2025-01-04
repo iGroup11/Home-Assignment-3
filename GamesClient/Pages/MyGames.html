@@ -44,7 +44,7 @@
 
                 //  Both filters are empty - fetch all games for the logged in user
                 if (rankVal === "" && priceVal === "") {
-                    let api = `https://localhost:7257/api/Games/UserGames?userId=${user.Id}`;
+                    let api = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Games/UserGames?userId=${user.Id}`;
                     ajaxCall("GET", api, "", filterSCB, filterECB);
                 }
                 // Either or both filters are applied
@@ -54,12 +54,12 @@
 
                     // do AJAX calls for each filter
                     if (rankVal !== "") {
-                        const rankApi = `https://localhost:7257/api/Games/SearchByRankScore?rank=${rankVal}&userid=${user.Id}`;
+                        const rankApi = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Games/SearchByRankScore?rank=${rankVal}&userid=${user.Id}`;
                         ajaxCall("GET", rankApi, "", rankFilterSCB, filterECB);
                     }
 
                     if (priceVal !== "") {
-                        const priceApi = `https://localhost:7257/api/Games/SearchByPrice?price=${priceVal}&userid=${user.Id}`;
+                        const priceApi = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Games/SearchByPrice?price=${priceVal}&userid=${user.Id}`;
                         ajaxCall("GET", priceApi, "", priceFilterSCB, filterECB);
                     }
 
@@ -112,7 +112,7 @@
 
 
         function givemeMyGames(user) {
-            let api = `https://localhost:7257/api/Games/UserGames?userId=${user.Id}`;
+            let api = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Games/UserGames?userId=${user.Id}`;
             ajaxCall("GET", api, "", getSCB, getECB);
         }
 
@@ -170,7 +170,7 @@
 
             console.log(user.Id)
             console.log(game)
-            let api = `https://localhost:7257/api/Games/Deletebyid?gameid=${game}&userid=${user.Id}`;
+            let api = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Games/Deletebyid?gameid=${game}&userid=${user.Id}`;
             ajaxCall("DELETE", api, "", deleteSCB, deleteECB);
         }
         function deleteSCB(Gameslist) {

@@ -35,7 +35,7 @@
                     Email: $("#email").val(),
                     Password: $("#password").val()
                 };
-                let api = "https://localhost:7257/api/Users"
+                let api = "https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Users"
                 ajaxCall("POST", api, JSON.stringify(user), postSCB, postECB)
                 function postSCB(message) {
                     console.log(message);
@@ -60,7 +60,7 @@
                         });
                         setTimeout(function () {
                         //send to server whos is the user who regietered now-cuz he will be the logged in user
-                        let api = `https://localhost:7257/api/Users/SearchUser`;
+                            let api = `https://proj.ruppin.ac.il/igroup11/test2/tar1/api/Users/SearchUser`;
                         ajaxCall("POST", api, JSON.stringify(user), logSCB, logECB)
                         function logSCB(user) {
                             console.log(user);
